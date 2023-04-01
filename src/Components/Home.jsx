@@ -8,7 +8,7 @@ export const Home = () => {
 
     const [imageIndex, setImageIndex] = useState(0);
   const images = ['src/images/1.png', 'src/images/2.png', 'src/images/3.png', 'src/images/4.png', 'src/images/5.png', 'src/images/6.png'];
-
+    
   useEffect(() => {
     const interval = setInterval(() => {
       setImageIndex((imageIndex + 1) % images.length);
