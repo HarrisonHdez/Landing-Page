@@ -7,7 +7,7 @@ export const Home = () => {
     
 
     const [imageIndex, setImageIndex] = useState(0);
-  const images = ['src/images/Rectangle.png', 'src/images/image.png', 'src/images/2.png', 'src/images/3.png', 'src/images/4.png', 'src/images/5.png'];
+  const images = ['src/images/1.png', 'src/images/2.png', 'src/images/3.png', 'src/images/4.png', 'src/images/5.png', 'src/images/6.png'];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -29,7 +29,7 @@ export const Home = () => {
 
 
   return (
-    <div className="container">
+    <>
       <NavBar />
       <section className="home">
         <div className="home-content ">
@@ -49,6 +49,6 @@ export const Home = () => {
             </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }
