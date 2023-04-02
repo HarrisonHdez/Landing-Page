@@ -1,8 +1,8 @@
 import React from 'react'
-import logo from '../images/Logo.svg';
-import menu from '../images/menu-desktop.svg';
-import menuMovil from '../images/menu-movil.svg';
-import call from '../images/call.svg';
+import logo from '../../public/Logo.svg';
+import menu from '../../public/menu-desktop.svg';
+import menuMovil from '../../public/menu-movil.svg';
+import call from '../../public/call.svg';
 // import { useState, useEffect } from "react";
 
 export const NavBar = () => {
