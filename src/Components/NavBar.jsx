@@ -1,64 +1,53 @@
 import React from 'react'
 import logo from '../images/Logo.svg';
-import menuIcon from '../images/Menu.svg';
+import menu from '../images/menu-desktop.svg';
 import menuMovil from '../images/menu-movil.svg';
 import call from '../images/call.svg';
 // import { useState, useEffect } from "react";
 
 export const NavBar = () => {
-    // const [scrolled, setScrolled] = useState(false);
 
-    // useEffect(() => {
-    //     const handleScroll = () => {
-    //     const isScrolled = window.scrollY > 0;
-    //     setScrolled(isScrolled);
-    //     };
-    //     window.addEventListener("scroll", handleScroll);
-    //     return () => window.removeEventListener("scroll", handleScroll);
-    // }, []);
+  const handleClick = (event) => {
+    event.preventDefault();
+  }
+    
 
   return (
     <header >
-      <nav
-        // className={scrolled ? "nav nav-fixed" : "nav"}
-        className="nav"
-        role="navigation"
-        aria-label="Barra de navegación principal"
-      >
-        <div className="logo-container">
-          <button className="menu-button">
-            <img src={menuMovil} alt="menu movil" className="left-image" />
+      <nav className="nav" role="navigation" aria-label="Barra de navegación principal">
+          <button className="nav__menu-movil">
+            <img src={menuMovil} alt="menu movil" className="nav__movil-img" />
           </button>
-          <a href="/">
-            <img src={logo} alt="Logo" className="logo nav-link" />
+          <a href="/" onClick={handleClick}>
+            <img src={logo} alt="Logo" className="nav__logo nav__link" />
           </a>
-          <a href="/" className="call-button">
-            <img src={call} alt="call" className="right-image" />
+          <a href="/" className="nav__call">
+            <img src={call} alt="call" className="nav__call-img" />
           </a>
-        </div>
-        <ul className="nav-links">
+        
+        <ul className="nav__links">
           <li>
-            <a href="/" className="nav-link">
+            <a href="/" className="nav__link" onClick={handleClick}>
               TAMAULIPAS 80
             </a>
           </li>
           <li>
-            <a href="/" className="nav-link">
+            <a href="/" className="nav__link" onClick={handleClick}>
               BAJA CALIFORNIA 262
             </a>
           </li>
           <li>
-            <a href="/" className="nav-link">
+            <a href="/" className="nav__link" onClick={handleClick}>
               AMORES 127
             </a>
           </li>
           <li>
-            <a href="/" className="nav-link-bookings">
+            <button href="/" className="nav__link-bookings" onClick={handleClick}>
               RESERVAS
-            </a>
+            </button>
           </li>
-          <button className="menu-icon-second">
-            <img src={menuIcon} alt="Menú" className="menu-icon" />
+          <button className="nav__menu-desktop">
+            <img src={menu} alt="Menú" className="nav__desktop-img" />
           </button>
         </ul>
       </nav>
