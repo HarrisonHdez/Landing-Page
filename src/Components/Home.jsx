@@ -5,7 +5,7 @@ import { NavBar } from './NavBar'
 
 export const Home = () => {
     
-
+       
     const [imageIndex, setImageIndex] = useState(0);
   const images = ['public/1.png', 'public/2.png', 'public/3.png', 'public/4.png', 'public/5.png', 'public/6.png'];
     
