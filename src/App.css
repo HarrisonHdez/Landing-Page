@@ -625,6 +625,7 @@ header {
   height: 52px;
   background: none;
   display: flex;
+  border: 2px solid;
   align-items: center;
   gap: 11px;
   cursor: pointer;
