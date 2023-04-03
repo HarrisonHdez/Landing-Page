@@ -1,21 +1,37 @@
 import { useEffect, useState } from 'react';
 import { NavBar } from './NavBar'
+import { Loader } from './Loader';
 
 
 
 export const Home = () => {
+  const [imageIndex, setImageIndex] = useState(0);
+    const images = ['public/1.png', 'public/2.png', 'public/3.png', 'public/4.png', 'public/5.png', 'public/6.png'];
+  
+    useEffect(() => {
+      const interval = setInterval(() => {
+        setImageIndex((imageIndex + 1) % images.length);
+      }, 3000);
+  
+      return () => clearInterval(interval);
+    }, [imageIndex]);
+  
+
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setLoading(false);
+        }, 3000);
+    }, []);
+    
+    if (loading) {
+        return <Loader />;
+    }
     
        
-    const [imageIndex, setImageIndex] = useState(0);
-  const images = ['public/1.png', 'public/2.png', 'public/3.png', 'public/4.png', 'public/5.png', 'public/6.png'];
     
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setImageIndex((imageIndex + 1) % images.length);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, [imageIndex]);
+  
 
 
 
@@ -30,6 +46,7 @@ export const Home = () => {
 
   return (
     <>
+      
       <NavBar />
       <section className="home">
         <div className="home__content">

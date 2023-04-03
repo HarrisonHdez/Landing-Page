@@ -17,6 +17,7 @@
   --color-fourth: #CDC8C1;
   --color-fifth: #917145;
   --color-transparent: transparent;
+  --color-text: #F4F4F4;
 
   --font-navbar: 'Euclid Square';
   --font-poppins: 'Poppins', sans-serif;
@@ -43,7 +44,66 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background-color: #9e6893; 
 }
+/** _____________ Loader ______________  */
 
+.loader {
+  flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    left: 0;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    transition: 0.5s linear;
+}
+/* .loader {
+  background: var(--color-white);
+  width: 100%;
+  z-index: 999;
+  align-items: center;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+} */
+
+.ball {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  animation: bounce6135 1s alternate infinite;
+  transition: 0.5s linear;
+}
+
+.ball {
+  background: var(--color-primary);
+}
+
+.ball:nth-child(2) {
+  animation-delay: 0.25s;
+}
+
+.ball:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+@keyframes bounce6135 {
+  from {
+    transform: scale(2);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+
+/** _______________ Loader ______________  */
 
 /** ________________ Nav ________________**/
  
@@ -107,14 +167,17 @@ header {
   color: var(--color-fifth);
 }
 .nav__link-bookings {
+  border: none;
   width: 126px;
   text-decoration: none;
-  height: 40px;
+  /* height: 40px; */
+  cursor: pointer;
   background-color: var(--color-primary);
   color: var(--color-white);
   padding: 13px 25px;
   transition: background-color 0.8s ease;
   border-radius: 300px;
+  
   
 }
 .nav__link-bookings:hover {
@@ -165,7 +228,7 @@ header {
     cursor: pointer;
   }
   .nav__menu-desktop:hover img.nav__desktop-img {
-    content: url(src/images/menu-desktop-hover.svg);
+    content: url(public/menu-desktop-hover.svg);
   }
   
 }
@@ -198,11 +261,303 @@ header {
   }
   .nav__links {
     gap: 30px;
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
+
+
 /** ________________ Nav ________________**/
+
+/** ___________ Menu Desplegable ________  **/
+.nav__menu-open {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-third);
+  z-index: 9999;
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: menu-open 0.3s ease-in-out forwards;
+  opacity: 0;
+}
+
+@keyframes menu-open {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.nav__menu-close {
+  animation: menu-close 0.3s ease-in-out forwards;
+  opacity: 1;
+}
+
+@keyframes menu-close {
+  0% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+.nav__menu-header {
+  display: none;
+}
+.nav__menu-phone {
+  display: flex;
+  gap: 20px;
+}
+.nav__menu-number {
+  color: var(--color-white);
+  width: 160px;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-family: Euclid Square;
+  font-weight: 300;
+}
+.nav__menu-buttons {
+  display: flex;
+  gap: 20px;
+}
+.nav__menu-button-call {
+  background-color: var(--color-primary);
+  cursor: pointer;
+  color: var(--color-white);
+  font-family: Euclid Square;
+  font-size: 15px;
+  font-weight: 400;
+  width: 223px;
+  height: 40px;
+  border: none;
+  border-radius: 300px;
+  -webkit-border-radius: 300px;
+  -moz-border-radius: 300px;
+  -ms-border-radius: 300px;
+  -o-border-radius: 300px;
+  transition: background-color 0.5s ease;
+  -webkit-transition: background-color 0.5s ease;
+  -moz-transition: background-color 0.5s ease;
+  -ms-transition: background-color 0.5s ease;
+  -o-transition: background-color 0.5s ease;
+}
+.nav__menu-button-call:hover {
+  background-color: var(--color-fifth);
+}
+.nav__close-menu {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.nav__close-image {
+
+}
+.nav__menu-content {
+  
+}
+.nav__menu-image {
+  display: none;
+}
+.nav__menu-footer {
+  
+
+}
+@media screen and (min-width: 768px) { 
+  .nav__menu-open {
+    overflow: auto;
+    background-repeat: no-repeat;
+   
+    
+  }
+  .nav__menu-header {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    margin: 41px auto;
+  }
+  .nav__menu-phone {
+    display: flex;
+    gap: 20px;
+  }
+  .nav__menu-number {
+    color: var(--color-white);
+    width: 160px;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-family: Euclid Square;
+    font-weight: 300;
+  }
+  .nav__menu-buttons {
+    display: flex;
+    gap: 20px;
+  }
+  .nav__menu-button-call {
+    background-color: var(--color-primary);
+    cursor: pointer;
+    color: var(--color-white);
+    font-family: Euclid Square;
+    font-size: 15px;
+    font-weight: 400;
+    width: 223px;
+    height: 40px;
+    border: none;
+    border-radius: 300px;
+    transition: background-color 0.5s ease;
+    
+  }
+  .nav__menu-button-call:hover {
+    background-color: var(--color-fifth);
+  }
+  .nav__close-menu {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  .nav__menu-image {
+    margin-top: -70px;
+    display: flex;
+    justify-content: right; 
+  }
+  .nav__menu-image img {
+    width: 100%;
+    max-width: initial;
+  }
+  .nav__logo-dropdown-menu {
+    display: none;
+  }
+  .nav__menu-content {
+      max-width: 1200px;
+      width: 90%;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 45% 30% 22%;
+      grid-template-rows: 659px;
+      grid-gap: 20px;
+  }
+  .nav__menu-content-links {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .nav__menu-content-links p {
+    font-weight: 300;
+    font-family: var(--font-navbar);
+    font-size: 15px;
+    color: var(--color-text)
+  }
+  .nav__menu-content-links img {
+    width: 180.41px;
+    
+  }
+  .nav__menu-content-links a {
+    font-size: 32px;
+    margin-bottom: -24px;
+    text-decoration: none;
+    font-family: var(--font-poppins);
+    font-weight: 400;
+    color: var(--color-text);
+    transition: color 0.5s ease;
+  }
+  .nav__menu-content-links a:hover {
+    color: var(--color-fifth);
+  }
+  .nav__menu-go-home-page {
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    margin-top: 69px;
+  }
+  .nav__menu-go-home-page a {
+    font-family: var(--font-navbar);
+    font-weight: 400;
+    font-size: 13px;
+    color: var(--color-primary);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.5s ease;
+    
+  }
+  .nav__menu-go-home-page a:hover { 
+    color: var(--color-fifth);
+  }
+  .nav__menu-footer {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    margin: 41px auto;
+  }
+  .nav__menu-a{
+    display: flex;
+    gap: 42px;
+    align-items: center;
+    font-size: 7px;
+    font-family: var(--font-navbar);
+    font-weight: 400;
+    color: var(--color-text);
+    text-transform: uppercase;
+    
+  }
+  .nav__menu-enlace {
+    transition: color 0.5s ease;
+    text-decoration: none;  
+    font-family: var(--font-navbar);
+    font-weight: 400;
+    color: var(--color-text);
+    
+  }
+  .nav__menu-enlace:hover {
+    color: var(--color-fifth);
+  }
+  .nav__menu-img {
+    display: flex;
+    gap: 38.3px;
+  }
+}
+@media screen and (min-width: 992px) { 
+  .nav__menu-a {
+    font-size: 10px;
+  }
+  .nav__menu-image img {
+    
+  }
+  .nav__menu-go-home-page a {
+    font-family: var(--font-navbar);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--color-primary);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.5s ease;
+    
+  }
+  
+}
+@media screen and (min-width: 1200px) { 
+  .nav__menu-a {
+    font-size: 12px;
+  }
+  .nav__menu-image img {
+    width: initial;
+  }
+  
+  
+}
+/** ___________ Menu Desplegable ________  **/
 
 
 /** ___________ Home ____________ */
@@ -289,7 +644,7 @@ header {
 }
 
 .home__button:hover .home__arrow-icon {
-  content: url(src/images/arrow-white.svg);
+  content: url(public/arrow-white.svg);
 }
 
 @media screen and (min-width: 359px) { 
