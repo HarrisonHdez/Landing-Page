@@ -6,7 +6,7 @@ import { Loader } from './Loader';
 
 export const Home = () => {
   const [imageIndex, setImageIndex] = useState(0);
-    const images = ['public/1.png', 'public/2.png', 'public/3.png', 'public/4.png', 'public/5.png', 'public/6.png'];
+    const images = ['/images/1.png', '/images/2.png', '/images/3.png', '/images/4.png', '/images/5.png', '/images/6.png'];
   
     useEffect(() => {
       const interval = setInterval(() => {
@@ -29,20 +29,6 @@ export const Home = () => {
         return <Loader />;
     }
     
-       
-    
-  
-
-
-
-
-
-
-
-
-
-
-
 
   return (
     <>
@@ -63,7 +49,7 @@ export const Home = () => {
                 gran experiencia en tu próxima visita a Ciudad de México.</p>
                 <button className="home__button">
                     VER DEPARTAMENTOS
-                    <img src="public/arrow.svg" alt="Arrow Icon" className="home__arrow-icon"></img>
+                    <img src='/images/arrow.svg' alt="Arrow Icon" className="home__arrow-icon"></img>
                 </button>
             </div>
         </div>

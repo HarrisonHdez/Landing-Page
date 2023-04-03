@@ -228,7 +228,7 @@ header {
     cursor: pointer;
   }
   .nav__menu-desktop:hover img.nav__desktop-img {
-    content: url(public/menu-desktop-hover.svg);
+    content: url(/images/menu-desktop-hover.svg);
   }
   
 }
@@ -644,7 +644,7 @@ header {
 }
 
 .home__button:hover .home__arrow-icon {
-  content: url(public/arrow-white.svg);
+  content: url(/images/arrow-white.svg);
 }
 
 @media screen and (min-width: 359px) { 

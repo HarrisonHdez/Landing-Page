@@ -29,13 +29,13 @@ export const NavBar = () => {
     <header >
       <nav className="nav" role="navigation" aria-label="Barra de navegación principal">
           <button className="nav__menu-movil" onClick={() => setMenuOpen(true)}>
-            <img src='public/menu-movil.svg' alt="menu movil" className="nav__movil-img" />
+            <img src='/images/menu-movil.svg' alt="menu movil" className="nav__movil-img" />
           </button>
           <a href="/" onClick={handleClick}>
-            <img src='public/Logo.svg' alt="Logo" className="nav__logo nav__link" />
+            <img src='/images/Logo.svg' alt="Logo" className="nav__logo nav__link" />
           </a>
           <a href="/" className="nav__call">
-            <img src='public/call.svg' alt="call" className="nav__call-img" />
+            <img src='/images/call.svg' alt="call" className="nav__call-img" />
           </a>
         
         <ul className="nav__links">
@@ -60,7 +60,7 @@ export const NavBar = () => {
             </button>
           </li>
           <button className="nav__menu-desktop" onClick={() => setMenuOpen(true)}>
-            <img src='public/menu-desktop.svg' alt="Menú" className="nav__desktop-img" />
+            <img src='/images/menu-desktop.svg' alt="Menú" className="nav__desktop-img" />
           </button>
         </ul>
       </nav>
@@ -80,7 +80,7 @@ export const NavBar = () => {
 
         <div className="nav__menu-header">
          <div className="nav__menu-phone">
-           <img src='public/call-menu.svg' alt="call menu" />
+           <img src='/images/call-menu.svg' alt="call menu" />
            <p className="nav__menu-number">+52 55 4204 7091</p>
          </div>
           <div className="nav__menu-buttons">
@@ -88,18 +88,18 @@ export const NavBar = () => {
             SOLICITAR LLAMADA
             </button>
             <button className='nav__close-menu' onClick={() => setMenuOpen(false)}>
-              <img className='nav__close-image' src='public/close-menu.svg' alt="Cerrar menú" />
+              <img className='nav__close-image' src='/images/close-menu.svg' alt="Cerrar menú" />
             </button>
           </div>
         </div>
         <div className="nav__menu-content">
 
           <div className="nav__menu-image">
-            <img src='public/image-menu.png' alt="image" />
+            <img src='/images/image-menu.png' alt="image" />
           </div>
 
           <div className="nav__menu-content-links">
-            <img src='public/logo-menu.svg' alt="logo" />
+            <img src='/images/logo-menu.svg' alt="logo" />
             <p>MENÚ</p>
             <a href="/" onClick={handleClick}>Amenidades</a>
             <a href="/" onClick={handleClick}>Departamentos</a>
@@ -122,10 +122,10 @@ export const NavBar = () => {
           </div>
           <div className="nav__menu-img">
             <a href="https://www.instagram.com" target="_blank">
-              <img src='public/buho-menu.svg' alt="icon" />
+              <img src='/images/buho-menu.svg' alt="icon" />
             </a>
             <a href="https://www.instagram.com" target="_blank">
-              <img src='public/instagram-menu.svg' alt="icon" />
+              <img src='/images/instagram-menu.svg' alt="icon" />
             </a>
           </div>
         </div>
