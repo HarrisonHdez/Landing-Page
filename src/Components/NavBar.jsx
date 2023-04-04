@@ -67,15 +67,17 @@ export const NavBar = () => {
           {menuOpen && (
       <div className="nav__menu-open ">
 
-          <button className="nav__menu-movil" onClick={() => setMenuOpen(true)}>
-            <img /* src={menuMovil} */ alt="menu movil" className="nav__movil-img" />
-          </button>
-          <a href="/" onClick={handleClick}>
-            {/* <img src={logo} alt="Logo" className="nav__logo-dropdown-menu nav__link" /> */}
-          </a>
-          <a href="/" className="nav__call">
-            <img /* src={call} */ alt="call" className="nav__call-img" />
-          </a>
+          <div className="nav__menu-open-content">
+            <button className="nav__menu-movil" onClick={() => setMenuOpen(false)}>
+              <img src='/images/close-menu-movil.svg' alt="menu movil" className="nav__movil-img" />
+            </button>
+            <a href="/" onClick={handleClick}>
+              <img src='/images/logo-menu-movil.svg' alt="Logo" className="nav__logo-dropdown-menu nav__link" />
+            </a>
+            <a href="/" className="nav__call">
+              <img src='/images/call-menu-movil.svg' alt="call" className="nav__call-img" />
+            </a>
+          </div>
 
 
         <div className="nav__menu-header">

@@ -1,4 +1,4 @@
-import { About } from "./Components/About"
+import { Video } from "./Components/Video"
 import { Footer } from "./Components/Footer"
 import { Home } from "./Components/Home"
 
@@ -8,7 +8,7 @@ function App() {
     <div className="">
       
       <Home />
-      <About />
+      <Video />
       <Footer />
     </div>
   )
