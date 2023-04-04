@@ -19,6 +19,7 @@
   --color-transparent: transparent;
   --color-text: #F4F4F4;
   --color-text-location: #CDC8C1;
+  --color-border: #E1DBD3;
 
   --font-navbar: 'Euclid Square';
   --font-poppins: 'Poppins', sans-serif;
@@ -881,26 +882,73 @@ header {
 
 
 /** _______________ Location _______________ */
-.location {
+
+ .location {
   background-color: var(--color-third);
   height: 1892px;
   width: 100%;
   margin: 0;
   display: flex;
+  flex-direction: column;
   
 }
-.location__paragraph {
-    font-size: 26px;
-    line-height: 38px;
-    color: var(--color-text-location);
-    font-weight: 400;
-    text-align: center;
-    /* padding: 0 59px; */
-    width: 100%;
-    height: fit-content;
-    max-width: 300px;
-    margin: 81px auto;
+.location__paragraph-container {
+  text-align: center;
 }
+.location__paragraph {
+  font-size: 26px;
+  line-height: 38px;
+  color: var(--color-text-location);
+  font-weight: 400;
+  text-align: center;
+  width: 100%;
+  height: fit-content;
+  max-width: 300px;
+  margin: 81px auto;
+}
+.location__images-container {
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: flex-start; */
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+
+.location__img {
+  text-align: center;
+}
+.location__img img {
+  display: flex;
+  width: 100%;
+  /* transition: transform 0.2s ease-in-out; */
+}
+.location__img:hover img {
+  /* transform: scale(1.1); */
+  
+}
+
+
+
+
+.location__img span {
+  font-family: var(--font-poppins);
+  font-weight: 600;
+  font-size: 18px;
+}
+.location__img p {
+  border-bottom: 1px solid var(--color-border);
+  font-family: var(--font-poppins);
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--color-text);
+  padding: 15px 0;
+  text-align: left;
+  margin-bottom: 70px;
+}
+
+
+
 @media screen and (min-width: 768px) { 
   .location {
     background-image: url(/images/esfera.png);
@@ -910,19 +958,129 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+      
   }
   .location__paragraph {
     font-size: 32px;
     text-align: left;
-    margin: -850px 0 0 0;
-    width: 90%;
+    margin: 0;
+    margin-top: -140px;
     max-width: 765px;
     color: var(--color-text-location);
     line-height: 52px;
-
   }
-
+  .location__images-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 251px;
+    width: 90%;
+    gap: 28px;
+    padding: 0;
+  }
+  .location__img span {
+    font-size: 20px;
+  }
+  .location__img p {
+    font-size: 20px;
+    margin: 0;
+  }
 }
+
+
+
+
+
+
+
+
+
+
+/* .location__paragraph-container {
+    text-align: center;
+    background: red;
+    margin-top: -159px;
+}
+
+.location__images-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.location__img {
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .location__paragraph-container {
+    text-align: center;
+    background: red;
+    margin-top: -159px;
+  }
+  .location__container {
+    
+  }
+  .location__images-container {
+    background: blue;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 253px;
+    gap: 28px;
+  }
+  .location_img {
+    text-align: center;
+  }
+  .location__img img {
+    display: flex;
+    width: 681px;
+  }
+} 
+ */
+
+
+
+
+/* .location {
+  background-color: var(--color-third);
+  height: 1892px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.location__images-container {
+  flex-direction: column;
+  align-items: center;
+}
+
+.location__img {
+  flex: none;
+  max-width: 100%;
+}
+@media (max-width: 768px) {
+  .location__images-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .location__img {
+    flex: 1 0 50%;
+    max-width: 50%;
+  }
+} */
+
 /** _______________ Location _______________ */
 
 .scroll-button {
