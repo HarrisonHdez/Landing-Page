@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Video = () => {
   return (
-    <section className="about">
+    <section className="video">
       <div className="video-container">
         <video  autoPlay muted loop loading="lazy">
           <source src="/videos/video1.mp4" type="video/mp4" />

@@ -18,6 +18,7 @@
   --color-fifth: #917145;
   --color-transparent: transparent;
   --color-text: #F4F4F4;
+  --color-text-location: #CDC8C1;
 
   --font-navbar: 'Euclid Square';
   --font-poppins: 'Poppins', sans-serif;
@@ -846,16 +847,16 @@ header {
 /** ___________ HOME ____________ */
 
 
-/** _______________ About _______________ */
-.about {
-  width: 100%;
-  height: 100vh;
+/** _______________ Video _______________ */
+.video {
+  /* width: 100%;
+  height: 100vh; */
   background-color: var(--color-white)
 }
 .video-container {
   max-width: 1536px;
-  width: 90vw;
-  height: 640px;
+  width: 100%;
+  height: 246px;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
@@ -870,9 +871,75 @@ header {
   left: 0;
   z-index: -1;
 }
+@media screen and (min-width: 768px) { 
+  .video-container {
+    width: 90vw;
+    height: 640px;
+  }
+}
+/** _______________ Video _______________ */
 
-/** _______________ About _______________ */
 
+/** _______________ Location _______________ */
+.location {
+  background-color: var(--color-third);
+  height: 1892px;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  
+}
+.location__paragraph {
+    font-size: 32px;
+    line-height: 38px;
+    color: var(--color-text-location);
+    font-weight: 400;
+    text-align: center;
+    /* padding: 0 59px; */
+    width: 100%;
+    height: fit-content;
+    max-width: 335px;
+    margin: 81px auto;
+}
+@media screen and (min-width: 768px) { 
+  .location {
+    background-image: url(/images/esfera.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    margin-top: -119px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .location__paragraph {
+    margin: -850px 0 0 0;
+    width: 90%;
+    max-width: 765px;
+    color: var(--color-text-location);
+    line-height: 52px;
+
+  }
+
+}
+/** _______________ Location _______________ */
+
+.scroll-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1;
+}
+
+.scroll-button__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-primary);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
 
 
 
@@ -889,7 +956,7 @@ header {
   bottom: 0;
   width: 100%;
   height: 120px;
-  background-color: var(--color-third);
+  background-color: #917145;
 }
 /* Fin del Footer */
 

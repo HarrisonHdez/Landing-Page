@@ -1,6 +1,8 @@
 import { Video } from "./Components/Video"
 import { Footer } from "./Components/Footer"
 import { Home } from "./Components/Home"
+import { Location } from "./Components/Location"
+import { ScrollButton } from "./Components/ScrollButton"
 
 function App() {
 
@@ -9,7 +11,9 @@ function App() {
       
       <Home />
       <Video />
+      <Location />
       <Footer />
+      <ScrollButton />
     </div>
   )
 }
