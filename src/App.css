@@ -947,6 +947,25 @@ header {
   margin-bottom: 70px;
 }
 
+.location__welcome {
+  
+}
+.location__welcome p {
+  color: var(--color-primary);
+  font-size: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media screen and (min-width: 768px) { 
@@ -1082,6 +1101,29 @@ header {
 } */
 
 /** _______________ Location _______________ */
+/** _______________ Gallery _______________ */
+.gallery {
+  background-color: var(--color-white);
+  width: 100%;
+  height: 2000px;
+}
+/** _______________ Gallery _______________ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .scroll-button {
   position: fixed;

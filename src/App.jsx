@@ -3,6 +3,7 @@ import { Footer } from "./Components/Footer"
 import { Home } from "./Components/Home"
 import { Location } from "./Components/Location"
 import { ScrollButton } from "./Components/ScrollButton"
+import { Gallery } from "./Components/Gallery"
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
       <Home />
       <Video />
       <Location />
+      <Gallery />
       <Footer />
       <ScrollButton />
     </div>

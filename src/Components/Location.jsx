@@ -18,6 +18,9 @@ export const Location = () => {
                     <p><span>Col. del Valle,</span> barrio céntrico, tranquilo y muy bien conectado.</p> 
             </div>
         </div>
+        {/* <div className="location__welcome">
+            <p>WELCOME<span> BIENVENIDO</span></p>
+        </div> */}
     </section>
 
   )
