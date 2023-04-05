@@ -9,6 +9,11 @@ export const Form = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log(`Nombre: ${nombre}\nTeléfono: ${telefono}\nCorreo: ${correo}\nAcepta términos: ${aceptaTerminos}`);
+
+        setNombre('')
+        setTelefono('')
+        setCorreo('')
+        setAceptaTerminos(false)
     }
 
 
