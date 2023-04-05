@@ -4,6 +4,7 @@ import { Home } from "./Components/Home"
 import { Location } from "./Components/Location"
 import { ScrollButton } from "./Components/ScrollButton"
 import { Gallery } from "./Components/Gallery"
+import { Form } from "./Components/Form"
 
 function App() {
 
@@ -14,7 +15,10 @@ function App() {
       <Video />
       <Location />
       <Gallery />
-      <Footer />
+
+
+      <Form />
+      {/* <Footer /> */}
       <ScrollButton />
     </div>
   )

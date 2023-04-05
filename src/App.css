@@ -1103,11 +1103,102 @@ header {
 /** _______________ Location _______________ */
 /** _______________ Gallery _______________ */
 .gallery {
-  background-color: var(--color-white);
+  /* background-color: var(--color-white); */
+  background: darkblue;
   width: 100%;
   height: 2000px;
 }
 /** _______________ Gallery _______________ */
+
+
+
+/** _______________ Form _______________ */
+.form {
+    background-color: white;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.form__title {
+  color: var(--color-fifth);
+  font-family: Poppins;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 72px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+.form__container {
+  margin-top: 3em;
+  display: grid;
+  gap: 2.5em;
+  max-width: 544px;
+  width: 100%;
+}
+.form__group {
+  position: relative;
+  color: red;
+}
+.form__input {
+  width: 100%;
+  background: none;
+  color: #917145;
+  font-size: 13px;
+  padding: .6em .3em;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #917145;
+  font-family: Euclid Square;
+}
+.form__input:focus + .form__label,
+.form__input:not(:placeholder-shown) + .form__label {
+  transform: translateY(-12px) scale(.7);
+  transform-origin: left top;
+}
+.form__label {
+  color: #917145;
+  cursor: pointer;
+  font-family: Euclid Square;
+  position: absolute;
+  top: -10px;
+  text-transform: uppercase;
+  left: 0;
+  font-size: 13px;
+  transform: translateY(10px);
+  transition: transform .5s, color .3s;
+  
+}
+.form__button {
+    font-family: Euclid Square;
+    color: #917145;
+    background: none;
+    max-width: 290px;
+    height: 57px;
+    width: 90%;
+    margin: auto;
+    border-radius: 300px;
+    border: 1.5px solid #917145;
+}
+.form__button:hover {
+    color: white;
+    background-color: #917145;
+}
+@media screen and (min-width: 768px) { 
+  .form__title {
+    color: var(--color-fifth);
+    font-family: Poppins;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 72px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+}
+/** _______________ Form _______________ */
 
 
 
