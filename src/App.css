@@ -1132,6 +1132,11 @@ header {
   letter-spacing: 0em;
   text-align: center;
 }
+.form__tile-svg {
+    top: 90px;
+    left: 4px;
+    position: relative;
+}
 .form__container {
   margin-top: 3em;
   display: grid;
@@ -1146,7 +1151,8 @@ header {
 .form__input {
   width: 100%;
   background: none;
-  color: #917145;
+  color: var(--color-secondary);
+  text-transform: uppercase;
   font-size: 13px;
   padding: .6em .3em;
   border: none;
@@ -1172,21 +1178,81 @@ header {
   transition: transform .5s, color .3s;
   
 }
+
+
+
+
+
 .form__button {
+    color: #fff;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    gap: 15px;
     font-family: Euclid Square;
     color: #917145;
     background: none;
     max-width: 290px;
     height: 57px;
+    font-size: 15px;
     width: 90%;
-    margin: auto;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    margin: 28px auto 0;
+    justify-content: center;
     border-radius: 300px;
     border: 1.5px solid #917145;
+    transition: background-color 0.5s ease;
+    
 }
 .form__button:hover {
     color: white;
     background-color: #917145;
+    width: 200px;
 }
+
+.form__button:hover .form__arrow {
+  content: url(/images/arrow-form-hover.svg);
+}
+
+
+
+.form__button::before {
+  content: "POR FAVOR, LLAMARME";
+}
+
+.form__button:hover::before {
+  content: "LLAMARME";
+}
+
+.form__button img {
+  margin-left: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.form__button:hover img {
+  transform: translateX(10px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1197,8 +1263,8 @@ input[type="checkbox"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  width: 20px;
-  height: 20px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   border: 2px solid #917145;
   outline: none;
@@ -1223,9 +1289,41 @@ input[type="checkbox"]:checked::after {
 }
 
 
-
-
-
+.form__group--checkbox {
+  text-align: left;
+  display: flex;
+  gap: 21px;
+  align-items: center;
+}
+.form__label-checkbox {
+  font-family: Euclid Square;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: 0.045em;
+  text-align: left;
+  text-transform: uppercase;
+  color: var(--color-fifth);
+}
+.form__label-checkbox {
+  font-family: Euclid Square;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: 0.045em;
+  text-align: left;
+  text-transform: uppercase;
+  color: var(--color-fifth);
+}
+.form__label-checkbox a {
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--color-fifth);
+  text-decoration: line;
+}
+.form__label-checkbox a:hover {
+  text-decoration: underline;
+}
 
 
 

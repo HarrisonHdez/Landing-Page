@@ -15,7 +15,11 @@ export const Form = () => {
 
     return (
       <form onSubmit={handleSubmit} className="form">
-        <h2 className="form__title">INFORMACIÓN<br/> RESERVAS</h2>
+          <img src="/images/&.svg" alt="Icon" className="form__tile-svg"/>
+
+        <h2 className="form__title">
+          INFORMACIÓN<br/> RESERVAS
+        </h2>
         <div className="form__container">
             <div className="form__group">
               <input
@@ -53,7 +57,7 @@ export const Form = () => {
               />
                <label htmlFor="correo" className="form__label">Correo electrónico</label>
             </div>
-            <div className="form__group">
+            <div className="form__group--checkbox">
               <input
                 type="checkbox"
                 id="acepta-terminos"
@@ -61,11 +65,13 @@ export const Form = () => {
                 onChange={(e) => setAceptaTerminos(e.target.checked)}
                 required
               />
-              <label htmlFor="acepta-terminos" >
-                Acepto las condiciones de tratamiento de información personal
+              <label htmlFor="acepta-terminos"  className="form__label-checkbox">
+                Acepto  <a href="#">las condiciones</a>  de tratamiento de <br />información personal
               </label>
             </div>
-        <button type="submit" className="form__button">POR FAVOR, LLAMARME</button>
+            <button type="submit" className="form__button">
+              <img src="/images/arrow-form.svg" alt="Icon" className="form__arrow"/>
+            </button>
         </div>
       </form>
     );
