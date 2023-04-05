@@ -18,7 +18,7 @@ function App() {
 
 
       <Form />
-      {/* <Footer /> */}
+      <Footer />
       <ScrollButton />
     </div>
   )
