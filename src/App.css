@@ -1337,13 +1337,16 @@ header {
 
 
 
-
+.gallery-container {
+  position: relative;
+  height: auto;
+  width: 100%;
+}
 
 
 .gallery {
   background-color: var(--color-white);
   width: 100%;
-  min-height: 2300px;
   position: relative;
 }
 .gallery__header {
@@ -1389,9 +1392,9 @@ header {
   font-size: 16px;
   display: flex;
 }
-.gallery__link img {
+/* .gallery__link img {
 
-}
+} */
 
 .galeria-container {
   display: flex;
@@ -1411,13 +1414,40 @@ header {
   height: auto;
 }
 
+
+.gallery__prueba1 {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+.gallery__prueba2 {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 666px;
+  gap: 42.5px;
+}
+
+
+
+
+.gallery__footer {
+  margin-top: 100px;
+}
+.gallery__footer-image {
+  margin-right: auto;
+}
+.gallery__footer-image img {
+  width: 209.73px;  
+}
 @media screen and (min-width: 768px) { 
   
   .gallery__header {
     height: 322px;
   }
-  .gallery__header-image {
-    
+  .gallery {
+    height: 2300px;
   }
   .gallery__paragraph-content {
     display: flex;
@@ -1474,14 +1504,38 @@ header {
     width: 100%;
     height: auto;
   }
+  /* .gallery__footer {
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    margin-top: 300px;
+  } */
+  .gallery__footer {
+    
+    margin-top: -20px;
+  }
+  .gallery__prueba1 {
+    padding: 0;
+    margin-top: 150px;
+    margin-left: 73px;
+  }
+  .gallery__footer-image img {
+    width: 368px;  
+  }
 }
 
 @media screen and (min-width: 1200px) {
-  .gallery {
+  .gallery-container {
     background-image: url(/images/esfera-gallery.svg);
     background-repeat: no-repeat;
     background-position-y: 131px;
     background-position-x: center;
+  }
+  .gallery {
+    /* background-image: url(/images/esfera-gallery.svg);
+    background-repeat: no-repeat;
+    background-position-y: 131px;
+    background-position-x: center; */
     
   }
   .gallery__header-image {
@@ -1494,7 +1548,11 @@ header {
   }
   .galeria-container {
     margin-top: 176px;
-}
+  }
+  .gallery__prueba1 {
+    
+    margin-right: 120px;
+  }
 }
 
 
@@ -1506,7 +1564,7 @@ header {
 
 /** _______________ Form _______________ */
 .form {
-    background-color: var(--color-white);
+    background-color: darkblue;
     width: 100%;
     height: 100vh;
     display: flex;
