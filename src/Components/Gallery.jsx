@@ -6,20 +6,19 @@ export const Gallery = () => {
       <div className="gallery">
 
         <div className="gallery__header">
-         <div className="gallery__paragraph-content">
-           <p className="gallery__paragraph">
-             TODOS LOS ESPACIOS se han diseñado para ser modernos, de lujo &
-             confortables, con todas las comodidades + amenidades para una estancia
-             de ensueño.
-           </p>
-           <a className="gallery__link">
-              VER SERVICIOS 
-              <img src="/images/arrow-form.svg" alt="Icon" />
-           </a>
-         </div>
           <img className="gallery__header-image" src="/images/flower-first-gallery.svg" alt="img" />
         </div>
-
+        <div className="gallery__paragraph-content">
+            <p className="gallery__paragraph">
+              TODOS LOS ESPACIOS se han diseñado para ser modernos, de lujo &
+              confortables, con todas las comodidades + amenidades para una estancia
+              de ensueño.
+            </p>
+            <a className="gallery__link">
+                VER SERVICIOS 
+                <img src="/images/arrow-form.svg" alt="Icon" />
+            </a>
+          </div>
 
 
           <div className="galeria-container">
